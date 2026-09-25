@@ -53,3 +53,28 @@ else voiceButton.addEventListener('click', () => {
   try { recognition.start(); } catch { voiceButton.disabled = false; status.textContent = 'Could not start voice input. Please type instead.'; }
 });
 renderQuestions();
+
+// Local practice calculator. No input is transmitted or persisted.
+const compareButton = document.querySelector('#compare-button');
+compareButton.addEventListener('click', () => {
+  const result = document.querySelector('#price-result');
+  const firstField = document.querySelector('#quote-one');
+  const secondField = document.querySelector('#quote-two');
+  const first = Number(firstField.value);
+  const second = Number(secondField.value);
+  const product = document.querySelector('#product').value.trim();
+  const unit = document.querySelector('#unit').value.trim();
+  const sourceA = document.querySelector('#source-one').value.trim();
+  const sourceB = document.querySelector('#source-two').value.trim();
+  const title = result.querySelector('h3');
+  const summary = result.querySelector('p');
+  if (!product || !unit || !sourceA || !sourceB || !firstField.value || !secondField.value || !Number.isInteger(first) || !Number.isInteger(second) || first <= 0 || second <= 0 || first > 100000000 || second > 100000000) {
+    title.textContent = 'Check the details first';
+    summary.textContent = 'Enter a product, matching unit and quality, two source labels, and two positive whole-number prices.';
+    return;
+  }
+  const money = value => new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN', maximumFractionDigits: 0 }).format(value);
+  const difference = Math.abs(first - second);
+  title.textContent = difference ? `These quotes differ by ${money(difference)}.` : 'These example quotes match.';
+  summary.textContent = `${sourceA}: ${money(first)}. ${sourceB}: ${money(second)}. Confirm that both refer to ${unit} of ${product}, check when each price was quoted, and ask another trusted seller if needed. These entries are unverified; this is not a recommended selling price.`;
+});
