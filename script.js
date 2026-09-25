@@ -1,6 +1,6 @@
 const questions = {
   en: [
-    { label: 'Check today’s selling price', terms: ['price', 'cost', 'how much', 'elo'], answer: 'Start by asking at least two trusted sellers or your market group for a current price for the same product, quality and unit. Compare their answers before setting your own price. This demo does not supply live prices.' },
+    { label: 'Practise checking a selling price', terms: ['price', 'cost', 'how much', 'elo'], answer: 'Start by asking at least two trusted sellers or your market group for a current price for the same product, quality and unit. Compare their answers before setting your own price. Try the price comparison practice below. This demo does not supply live prices.' },
     { label: 'Check a buyer’s payment', terms: ['payment', 'buyer', 'transfer', 'money', 'pay'], answer: 'Open your own bank or payment app and confirm that the money has arrived before releasing goods. Never rely on a screenshot or SMS alone. Do not share your PIN or one time code.' },
     { label: 'Find a supplier', terms: ['supplier', 'restock', 'stock', 'wholesale'], answer: 'Ask a trusted member of your trade group to recommend a supplier. Confirm the supplier’s identity, product quality, full cost and delivery terms before paying.' },
     { label: 'Warn my trade group about fraud', terms: ['fraud', 'scam', 'report', 'group'], answer: 'Pause the transaction. Save relevant messages, contact your payment provider through its official channel, and warn your group without publishing private account details or accusing someone without evidence.' }
