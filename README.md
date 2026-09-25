@@ -42,3 +42,7 @@ The core intervention is **trusted community guidance and measurable independent
 ## Price comparison practice
 
 The price practice section starts with **fictional ₦4,500 and ₦5,200 quotes** purely to demonstrate comparison. Visitors may enter their own values; the page calculates the difference locally and reminds them to confirm the unit, quality, timing and source. It does not fetch, verify, recommend or store prices. Never cite the sample figures as observed market data in the IEEE submission.
+
+## Pilot and pitch preparation
+
+See [PILOT_GUIDE.md](PILOT_GUIDE.md) for a guide-led session script, an anonymous evidence sheet, outcome definitions, risks and a two-minute pitch outline. It is a proposed protocol, not field results. The language switch currently changes question prompts and answers, not the whole site; Yoruba copy and speech recognition require testing with intended users.
